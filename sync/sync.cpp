@@ -4,8 +4,6 @@
 #include <stdio.h>
 #include <pthread.h>
 
-using namespace std;
-
 void * kinder_thread(void *arg)
 {
     printf("This is kinder_thread()\n");
