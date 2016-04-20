@@ -1,6 +1,6 @@
 # Rob's super awesome makefile assignment 2
 # build an executable named sync.exe from sync.cpp
-CC = g++
+CC = clang
 ARGS = -Wall -pthread
 
 #looks at this directory, then create .exe in target 
