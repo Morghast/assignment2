@@ -5,8 +5,14 @@
 #include <iostream>
 #include <pthread.h>
 #include <string>
+#include <mutex>
 
 using namespace std;
+
+typedef struct thread_attributes
+{
+    pthread_mutex_t lock;
+}thread_attributes;
 
 void * kinder_thread(void *arg)
 {
@@ -14,8 +20,8 @@ void * kinder_thread(void *arg)
     
     cout << "This is kinder\n"; 
     input = static_cast<string*>(arg);
-    pthread_exit(NULL);
     cout << *input;
+    pthread_exit(NULL);
 }
 
 int main()
