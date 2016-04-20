@@ -10,7 +10,9 @@ using namespace std;
 
 void * kinder_thread(void *arg)
 {
-    printf("This is kinder_thread()\n");
+    cout << "This is kinder_thread()\n";
+    string* input;
+    input = arg;
     pthread_exit(NULL);
 }
 
@@ -27,6 +29,8 @@ int main()
         cout << "Error: pthread_create() failed\n";
         exit(EXIT_FAILURE);
     }
+    cin >> input;
+    cout << 
     
     pthread_exit(NULL);
 }
