@@ -30,11 +30,11 @@ int main()
     pthread_t my_thread;
     int result;
     
-    cout << "In main: creating thread\n";
+    cout << "Creating main thread\n";
     result = pthread_create(&my_thread, NULL, &kinder_thread, &input);
     if(result != 0)
     {
-        cout << "Error: pthread_create() failed\n";
+        cout << "Error: Failed to create main thread\n";
         exit(EXIT_FAILURE);
     }
     cin >> input;
