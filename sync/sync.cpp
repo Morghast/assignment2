@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <pthread.h>
-#include <string.h>
+#include <string>
 
 using namespace std;
 
