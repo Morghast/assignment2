@@ -10,12 +10,12 @@ using namespace std;
 
 void * kinder_thread(void *arg)
 {
-    string input;
+    string* input;
     
-    cout << "This is kinder\n";
-    static_cast<string*>(arg);
-    input = arg;
+    cout << "This is kinder\n"; 
+    input = static_cast<string*>(arg);
     pthread_exit(NULL);
+    cout << *input;
 }
 
 int main()
