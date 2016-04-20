@@ -10,6 +10,8 @@ using namespace std;
 
 void * kinder_thread(void *arg)
 {
+    string input;
+    
     cout << "This is kinder_thread()\n";
     static_cast<string*>(arg);
     input = arg;
