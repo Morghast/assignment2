@@ -2,7 +2,11 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <iostream>
 #include <pthread.h>
+#include <string.h>
+
+using namespace std;
 
 void * kinder_thread(void *arg)
 {
@@ -12,14 +16,15 @@ void * kinder_thread(void *arg)
 
 int main()
 {
+    string input;    
     pthread_t my_thread;
     int result;
     
-    printf("In main: creating thread\n");
-    result = pthread_create(&my_thread, NULL, &kinder_thread, NULL);
+    cout << "In main: creating thread\n";
+    result = pthread_create(&my_thread, NULL, &kinder_thread, &input);
     if(result != 0)
     {
-        printf("Error: pthread_create() failed\n");
+        cout << "Error: pthread_create() failed\n";
         exit(EXIT_FAILURE);
     }
     
