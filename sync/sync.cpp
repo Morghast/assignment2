@@ -12,7 +12,7 @@ void * kinder_thread(void *arg)
 {
     string input;
     
-    cout << "This is kinder_thread()\n";
+    cout << "This is kinder\n";
     static_cast<string*>(arg);
     input = arg;
     pthread_exit(NULL);
