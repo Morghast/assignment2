@@ -30,7 +30,7 @@ int main()
         exit(EXIT_FAILURE);
     }
     cin >> input;
-    cout << 
+    //cout << 
     
     pthread_exit(NULL);
 }
