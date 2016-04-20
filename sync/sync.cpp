@@ -11,7 +11,7 @@ using namespace std;
 void * kinder_thread(void *arg)
 {
     cout << "This is kinder_thread()\n";
-    string* input;
+    static_cast<string*>(arg);
     input = arg;
     pthread_exit(NULL);
 }
