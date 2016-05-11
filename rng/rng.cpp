@@ -1,5 +1,5 @@
 //Rob Davis's awesome random number generator program
-//buffer.cpp
+//rng.cpp
 
 #include <stdlib.h>
 #include <stdio.h>
